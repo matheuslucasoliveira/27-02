@@ -3,94 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Cardápio</title>
+    <meta name="description" content="Cardápio do Restaurante com pratos tradicionais italianos e franceses. Entradas, pratos principais, sobremesas e bebidas.">
+    <title>Cardápio - Restaurante Italiano</title>
     <link rel="stylesheet" href="styles/menu.css">
 </head>
 <body>
+    <main class="menu-container" role="main">
+        <header class="menu-header">
+            <h1 class="menu-title" id="menu-titulo">Nosso Cardápio</h1>
+            <nav class="menu-nav" aria-label="Navegação do cardápio">
+                <ul role="menubar" aria-label="Seções do cardápio">
+                    <li role="none"><a href="#entradas" role="menuitem" aria-current="page">Entradas</a></li>
+                    <li role="none"><a href="#principais" role="menuitem">Pratos Principais</a></li>
+                    <li role="none"><a href="#sobremesas" role="menuitem">Sobremesas</a></li>
+                    <li role="none"><a href="#bebidas" role="menuitem">Bebidas</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <div class="menu-container">
-        <h1 class="menu-title">Nosso Cardápio</h1>
-        
-        <section class="menu-category">
-            <h2 class="category-title">Entradas</h2>
-            <div class="menu-items">
-                <div class="menu-item">
-                    <div class="item-info">
-                        <h3 class="item-name">Bruschetta</h3>
-                        <p class="item-description">Pão italiano grelhado com tomates, alho e manjericão</p>
-                    </div>
-                    <span class="item-price">R$ 25,00</span>
-                </div>
-                <div class="menu-item">
-                    <h3 class="item-name">Salada Caprese</h3>
-                    <p class="item-description">Tomates, mussarela, manjericão e azeite</p>
-                    <span class="item-price">R$ 18,00</span>
-                </div>
-            </div>
-        </section>
-        
-        <section class="menu-category">
-            <h2 class="category-title">Pratos Principais</h2>
-            <div class="menu-items">
-                <div class="menu-item">
-                    <h3 class="item-name">Crème Brûlée</h3>
-                    <p class="item-description">Creme de leite com calda de caramelo</p>
-                    <span class="item-price">R$ 35,00</span>
-                </div>
-                <div class="menu-item">
-                    <h3 class="item-name">Fondue Savoyarde.</h3>
-                    <p class="item-description">Queijo e vinho branco derretidos</p>
-                    <span class="item-price">R$ 42,00</span>
-                </div>
-                <div class="menu-item">
-                    <h3 class="item-name">Ravioli</h3>
-                    <p class="item-description">Ravioli recheados com queijo e espinafre</p>
-                    <span class="item-price">R$ 30,00</span>
-                </div>
-                <div class="menu-item">
-                    <h3 class="item-name">Lasagna</h3>
-                    <p class="item-description">Lasagna com molho bolonhesa e queijo</p>
-                    <span class="item-price">R$ 30,00</span>
-                </div>
-                <div class="menu-item">
-                    <h3 class="item-name">Spaghetti</h3>
-                    <p class="item-description">Spaghetti ao molho bolonhesa</p>
-                    <span class="item-price">R$ 30,00</span>
-                </div>
-            </div>
-        </section>
-        
-        <section class="menu-category">
-            <h2 class="category-title">Sobremesas</h2>
-            <div class="menu-items">
-                <div class="menu-item">
-                    <h3 class="item-name">Tiramisu</h3>
-                    <p class="item-description">Tiramisu italiano</p>
-                    <span class="item-price">R$ 20,00</span>
-                </div>
-                <div class="menu-item">
-                    <h3 class="item-name">Mousse de Chocolate</h3>
-                    <p class="item-description">Mousse de chocolate com creme</p>
-                    <span class="item-price">R$ 18,00</span>
-                </div>
-            </div>
+        <section class="menu-content" aria-labelledby="menu-titulo">
+            <article id="entradas" class="menu-category" aria-labelledby="entradas-titulo">
+                <h2 class="category-title" id="entradas-titulo">Entradas</h2>
+                <ul class="menu-items" role="list">
+                    <li class="menu-item" role="listitem">
+                        <article class="item-info">
+                            <h3 class="item-name">Bruschetta</h3>
+                            <p class="item-description">Pão italiano grelhado com tomates, alho e manjericão</p>
+                            <p class="item-allergens">Contém: glúten</p>
+                        </article>
+                        <data class="item-price" value="25.00" aria-label="Preço: 25 reais">R$ 25,00</data>
+                    </li>
+                    <li class="menu-item">
+                        <article class="item-info">
+                            <h3 class="item-name">Salada Caprese</h3>
+                            <p class="item-description">Tomates, mussarela, manjericão e azeite</p>
+                        </article>
+                        <data class="item-price" value="18.00">R$ 18,00</data>
+                    </li>
+                </ul>
+            </article>
+            
+            <article id="principais" class="menu-category" aria-labelledby="principais-titulo">
+                <h2 class="category-title" id="principais-titulo">Pratos Principais</h2>
+                <ul class="menu-items" role="list">
+                    <li class="menu-item" role="listitem">
+                        <article class="item-info">
+                            <h3 class="item-name">Crème Brûlée</h3>
+                            <p class="item-description">Creme de leite com calda de caramelo</p>
+                        </article>
+                        <data class="item-price" value="35.00">R$ 35,00</data>
+                    </li>
+                    <li class="menu-item" role="listitem">
+                        <article class="item-info">
+                            <h3 class="item-name">Fondue Savoyarde</h3>
+                            <p class="item-description">Queijo e vinho branco derretidos</p>
+                            <p class="item-allergens">Contém: lactose</p>
+                            <span class="dietary-info" aria-label="Prato vegetariano">🌱</span>
+                        </article>
+                        <data class="item-price" value="42.00" aria-label="Preço: 42 reais">R$ 42,00</data>
+                    </li>
+                    <li class="menu-item">
+                        <h3 class="item-name">Ravioli</h3>
+                        <p class="item-description">Ravioli recheados com queijo e espinafre</p>
+                        <span class="item-price">R$ 30,00</span>
+                    </li>
+                    <li class="menu-item">
+                        <h3 class="item-name">Lasagna</h3>
+                        <p class="item-description">Lasagna com molho bolonhesa e queijo</p>
+                        <span class="item-price">R$ 30,00</span>
+                    </li>
+                    <li class="menu-item">
+                        <h3 class="item-name">Spaghetti</h3>
+                        <p class="item-description">Spaghetti ao molho bolonhesa</p>
+                        <span class="item-price">R$ 30,00</span>
+                    </li>
+                </ul>
+            </article>
+            
+            <article id="sobremesas" class="menu-category">
+                <h2 class="category-title">Sobremesas</h2>
+                <ul class="menu-items">
+                    <li class="menu-item">
+                        <article class="item-info">
+                            <h3 class="item-name">Tiramisu</h3>
+                            <p class="item-description">Tiramisu italiano</p>
+                        </article>
+                        <data class="item-price" value="20.00">R$ 20,00</data>
+                    </li>
+                    <li class="menu-item">
+                        <article class="item-info">
+                            <h3 class="item-name">Mousse de Chocolate</h3>
+                            <p class="item-description">Mousse de chocolate com creme</p>
+                        </article>
+                        <data class="item-price" value="18.00">R$ 18,00</data>
+                    </li>
+                </ul>
+            </article>
+
+            <article id="bebidas" class="menu-category">
+                <h2 class="category-title">Bebidas</h2>
+                <ul class="menu-items">
+                    <li class="menu-item">
+                        <article class="item-info">
+                            <h3 class="item-name">Água Mineral</h3>
+                            <p class="item-description">Com ou sem gás (500ml)</p>
+                        </article>
+                        <data class="item-price" value="3.50">R$ 3,50</data>
+                    </li>
+                    <li class="menu-item">
+                        <article class="item-info">
+                            <h3 class="item-name">Coca-Cola</h3>
+                            <p class="item-description">Lata (350ml)</p>
+                        </article>
+                        <data class="item-price" value="13.00">R$ 13,00</data>
+                    </li>
+                </ul>
+            </article>
         </section>
 
-        <section class="menu-category">
-            <h2 class="category-title">Bebidas</h2>
-            <div class="menu-items">
-                <div class="menu-item">
-                    <h3 class="item-name">Água Mineral</h3>
-                    <p class="item-description">Com ou sem gás (500ml)</p>
-                    <span class="item-price">R$ 3,50</span>
-                </div>
-                <div class="menu-item">
-                    <h3 class="item-name">Coca-Cola</h3>
-                    <p class="item-description">Lata (350ml)</p>
-                    <span class="item-price">R$ 13,00</span>
-                </div>
-            </div>
-        </section>
-    </div>
+        <footer class="menu-footer">
+            <address aria-label="Informações de contato e funcionamento">
+                <p>
+                    <span aria-label="Horário de funcionamento">
+                        Horário: <time datetime="11:00">11h</time> às <time datetime="23:00">23h</time> (Seg-Sex) | 
+                        <time datetime="11:00">11h</time> às <time datetime="00:00">00h</time> (Sáb-Dom)
+                    </span>
+                </p>
+                <p>
+                    <span aria-label="Formas de pagamento">Aceitamos todos os cartões de crédito e débito</span>
+                </p>
+                <p>
+                    <span aria-label="Contatos">
+                        Contato: <a href="tel:+551199999999" aria-label="Telefone: 11 9999 9999">(11) 9999-9999</a> | 
+                        <a href="mailto:email@restaurante.com" aria-label="Email: email@restaurante.com">email@restaurante.com</a>
+                    </span>
+                </p>
+            </address>
+        </footer>
+    </main>
+
+    <aside class="accessibility-info" aria-label="Informações de acessibilidade">
+        <p>Para navegar pelo cardápio usando teclado, utilize as teclas Tab e Enter.</p>
+        <p>Para ler informações detalhadas sobre alergênicos, procure o ícone ℹ️ ao lado de cada prato.</p>
+    </aside>
 </body>
 </html>
